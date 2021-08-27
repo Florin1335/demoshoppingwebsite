@@ -31,7 +31,7 @@ export default function Categorii() {
             <img
               className="img-fluid w-75 d-block mx-auto"
               alt="gpu"
-              src="/imagini/main/placidebaza.png"
+              src="/imagini/main/placiDeBaza.png"
             ></img>
             <p className="text-center fw-bold h2">Placi de bază</p>
           </Link>

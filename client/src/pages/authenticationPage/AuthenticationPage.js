@@ -54,7 +54,7 @@ export default function AuthenticationPage() {
   const onSubmitLogin = (e) => {
     e.preventDefault();
     dispatch({ type: "login" });
-    fetch(`http://${serverIP}/autentificare/login`, {
+    fetch(`/autentificare/login`, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
