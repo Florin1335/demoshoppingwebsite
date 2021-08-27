@@ -7,16 +7,12 @@
     "dev": "nodemon --watch backend --exec babel-node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "./node_modules/.bin/babel backend_es6+ --out-dir backend",
-    "start": "babel-node backend/server.js",
+    "start": "node backend/server.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/node": "^7.12.6",
-    "@babel/preset-env": "^7.12.7",
     "bcrypt": "^5.0.0",
     "connect-mongodb-session": "^2.4.1",
     "express": "^4.17.1",
