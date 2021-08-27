@@ -91,15 +91,26 @@ export default function IndividualProductPage() {
             </div>
             <div className="container-fluid d-sm-none d-block">
               <h5 className="card-title text-center">{product.denumire}</h5>
-              <img
-                className="img-fluid"
-                src={
-                  product.imagine &&
-                  window.location.origin + product.imagine.slice(1)
-                }
-                alt="produs"
-              ></img>
-              <p className="card-text text-end">{product.pret} RON</p>
+              <div className="card-body">
+                <p className="card-text text-center">
+                  Disponibilitate: <Stoc stoc={product.stoc}></Stoc>
+                </p>
+                <img
+                  className="img-fluid"
+                  src={
+                    product.imagine &&
+                    window.location.origin + product.imagine.slice(1)
+                  }
+                  alt="produs"
+                ></img>
+                <div className="d-flex justify-content-between">
+                  <ButonAdaugaInCos
+                    id={product._id}
+                    stoc={product.stoc}
+                  ></ButonAdaugaInCos>
+                  <p className="card-text text-end">{product.pret} RON</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
