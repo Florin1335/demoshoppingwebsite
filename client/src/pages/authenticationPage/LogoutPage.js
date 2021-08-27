@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import Loading from "../Loading.js";
-import { ip as serverIP } from "../../ip.js";
 import Infos from "../Infos.js";
 import Errors from "../Errors.js";
 import { LoginContext } from "../header/LoginContext.js";
@@ -17,7 +16,7 @@ export default function LogoutPage() {
       setInfo(null);
       setError(null);
       setIsLoading(true);
-      fetch(`http://${serverIP}/autentificare/logout`, {
+      fetch(`/autentificare/logout`, {
         method: "DELETE",
         credentials: "include",
       })

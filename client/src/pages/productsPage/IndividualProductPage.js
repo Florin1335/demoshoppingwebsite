@@ -1,6 +1,5 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
-import { ip as serverIP } from "../../ip.js";
 import Detalii from "./Detalii.js";
 import Galerie from "./Galerie.js";
 import ButonAdaugaInCos from "../productsPage/ButtonAdaugaInCos.js";
@@ -38,7 +37,7 @@ export default function IndividualProductPage() {
 
   useEffect(() => {
     dispatch({ type: "loading" });
-    fetch(`http://${serverIP}/db/${params.id}`)
+    fetch(`/db/${params.id}`)
       .then((value) => value.json())
       .then(
         (value) => {

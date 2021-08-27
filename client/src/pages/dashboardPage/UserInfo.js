@@ -1,7 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import Loading from "../Loading.js";
 import Errors from "../Errors.js";
-import { ip as serverIP } from "../../ip.js";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -31,7 +30,7 @@ export default function UserInfo(props) {
 
   useEffect(() => {
     dispatch({ type: "loading" });
-    fetch(`http://${serverIP}/autentificare/info`, {
+    fetch(`/autentificare/info`, {
       method: "get",
       credentials: "include",
     })

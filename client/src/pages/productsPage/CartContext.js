@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState, useContext } from "react";
 import { LoginContext } from "../header/LoginContext";
-import { ip as serverIP } from "../../ip.js";
 
 export const CartContext = createContext();
 
@@ -10,7 +9,7 @@ export function CartProvider(props) {
 
   useEffect(() => {
     if (isAuth) {
-      fetch(`http://${serverIP}/cos/get`, {
+      fetch(`/cos/get`, {
         credentials: "include",
         method: "get",
       })

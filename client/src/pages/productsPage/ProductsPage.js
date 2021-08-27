@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ip as serverIP } from "../../ip.js";
 import Errors from "../Errors.js";
 import Loading from "../Loading.js";
 import ButtonAdaugaInCos from "./ButtonAdaugaInCos.js";
@@ -13,7 +12,7 @@ export default function ProductsPage() {
 
   useEffect(() => {
     const requestProducts = () => {
-      fetch(`http://${serverIP}/db/${categorie.categorie}`)
+      fetch(`/db/${categorie.categorie}`)
         .then((value) => value.json())
         .then(
           (value) => {

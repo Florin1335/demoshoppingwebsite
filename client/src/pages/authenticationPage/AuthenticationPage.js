@@ -1,5 +1,4 @@
 import React, { useReducer, useContext } from "react";
-import { ip as serverIP } from "../../ip.js";
 import Errors from "../Errors.js";
 import { LoginContext } from "../header/LoginContext.js";
 import Infos from "../Infos.js";

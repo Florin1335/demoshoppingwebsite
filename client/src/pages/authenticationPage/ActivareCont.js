@@ -3,7 +3,6 @@ import { Redirect, useParams } from "react-router-dom";
 import Loading from "../Loading.js";
 import Errors from "../Errors.js";
 import Infos from "../Infos.js";
-import { ip as serverIP } from "../../ip.js";
 
 export default function ActivareCont() {
   const params = useParams();
@@ -17,7 +16,7 @@ export default function ActivareCont() {
     setInfo(null);
     setError(null);
     setIsLoading(true);
-    fetch(`http://${serverIP}/autentificare/activare_cont`, {
+    fetch(`/autentificare/activare_cont`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify({ cod_activare: params.cod }),

@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { CartContext } from "../productsPage/CartContext.js";
 import ProductDisplay from "./ProductDisplay.js";
 import { LoginContext } from "../header/LoginContext.js";
-import { ip as serverIP } from "../../ip.js";
 import Infos from "../Infos.js";
 import Errors from "../Errors.js";
 import PlaseazaComanda from "./PlaseazaComanda.js";
@@ -20,7 +19,7 @@ export default function CartPage() {
     if (isAuth) {
       setInfo(null);
       setError(null);
-      fetch(`http://${serverIP}/cos/golire`, {
+      fetch(`/cos/golire`, {
         method: "DELETE",
         credentials: "include",
       })
@@ -56,7 +55,7 @@ export default function CartPage() {
   const handleActualizareClick = () => {
     setActualizare(null);
     if (isAuth) {
-      fetch(`http://${serverIP}/cos/set`, {
+      fetch(`/cos/set`, {
         method: "POST",
         body: JSON.stringify(tempCart),
         credentials: "include",

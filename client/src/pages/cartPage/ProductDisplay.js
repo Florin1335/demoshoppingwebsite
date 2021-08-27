@@ -1,5 +1,4 @@
 import React, { useEffect, useReducer } from "react";
-import { ip as serverIP } from "../../ip.js";
 import Loading from "../Loading.js";
 import Errors from "../Errors.js";
 import Stoc from "../productsPage/Stoc.js";
@@ -36,7 +35,7 @@ export default function ProductDisplay(props) {
 
   useEffect(() => {
     dispatch({ type: "loading" });
-    fetch(`http://${serverIP}/db/${props.id}`)
+    fetch(`/db/${props.id}`)
       .then((value) => value.json())
       .then(
         (value) => {

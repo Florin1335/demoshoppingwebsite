@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ip as serverIP } from "../../ip.js";
 import FormComanda from "./FormComanda.js";
 import Errors from "../Errors.js";
 import Infos from "../Infos.js";
@@ -24,7 +23,7 @@ export default function PlaseazaComanda(props) {
     setIsLoading(true);
     setError(null);
     setInfo(null);
-    fetch(`http://${serverIP}/cos/comanda`, {
+    fetch(`/cos/comanda`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(userData),

@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { LoginContext } from "../header/LoginContext.js";
 import { CartContext } from "./CartContext.js";
-import { ip as serverIP } from "../../ip.js";
 
 export default function ButtonAdaugaInCos(props) {
   const [isAuth] = useContext(LoginContext);
@@ -12,7 +11,7 @@ export default function ButtonAdaugaInCos(props) {
   const fetchRequest = (cart) => {
     setInfo(null);
     setClicked(true);
-    fetch(`http://${serverIP}/cos/set`, {
+    fetch(`/cos/set`, {
       method: "post",
       body: JSON.stringify(cart),
       credentials: "include",

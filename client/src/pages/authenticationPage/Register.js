@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Infos from "../Infos.js";
 import Errors from "../Errors.js";
 import Loading from "../Loading.js";
-import { ip as serverIP } from "../../ip.js";
 
 export default function Register() {
   const [userData, setUserData] = useState({
@@ -22,7 +21,7 @@ export default function Register() {
     setError(null);
     setInfo(null);
     setClicked(true);
-    fetch(`http://${serverIP}/autentificare/register`, {
+    fetch(`/autentificare/register`, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },

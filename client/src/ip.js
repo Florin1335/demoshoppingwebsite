@@ -1,1 +1,0 @@
-export const ip = 'localhost:3001';

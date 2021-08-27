@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ip as serverIP } from "../../ip.js";
 import Errors from "../Errors.js";
 import Loading from "../Loading.js";
 import Comanda from "./Comanda.js";
@@ -12,7 +11,7 @@ export default function Comenzi() {
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-    fetch(`http://${serverIP}/autentificare/comenzi`, {
+    fetch(`/autentificare/comenzi`, {
       method: "GET",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
