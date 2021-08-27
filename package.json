@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --watch backend --exec babel-node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel-node backend/server.js",
+    "babel": "./node_modules/.bin/babel backend_es6+ --out-dir backend",
     "start": "babel-node backend/server.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
