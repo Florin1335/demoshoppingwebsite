@@ -65,6 +65,6 @@ server.use((err, req, res, next) => {
 server.get('*', (req, res) => {
   res.sendFile(_path.default.join(__dirname, '../client', 'build', 'index.html'));
 });
-server.listen(PORT, 'localhost', () => {
-  console.log('Server creat pe portul ' + PORT);
+server.listen(PORT, err => {
+  if (err) console.log(err.message);else console.log('Server creat pe portul ' + PORT);
 });
