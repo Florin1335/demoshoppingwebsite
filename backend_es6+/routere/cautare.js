@@ -30,9 +30,7 @@ const arrayCategorii = [
 cautare.get(
   "/:query",
   expressAsyncHandler(async (req, res) => {
-    console.log(req.params);
-    let query = req.params.query.replaceAll("%20", " ");
-    console.log(req.params.query.replace(/%20/g, " "));
+    let query = req.params.query;
     let totalPotriviri = [];
     for (let i = 0; i < arrayCategorii.length; i++) {
       let rezultate = await arrayCategorii[i].find({});
