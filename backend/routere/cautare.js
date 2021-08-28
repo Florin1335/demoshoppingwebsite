@@ -38,8 +38,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const cautare = _express.default.Router();
 
 const arrayCategorii = [_placaVideo.default, _procesor.default, _placaDeBaza.default, _memorieRam.default, _ssd.default, _hdd.default, _sursa.default, _carcasa.default, _cooler.default, _ventilator.default];
-cautare.get('/:query', (0, _expressAsyncHandler.default)(async (req, res) => {
-  let query = req.params.query.replaceAll('+', ' ');
+cautare.get("/:query", (0, _expressAsyncHandler.default)(async (req, res) => {
+  let query = req.params.query.replaceAll("%20", " ");
   let totalPotriviri = [];
 
   for (let i = 0; i < arrayCategorii.length; i++) {
@@ -51,7 +51,7 @@ cautare.get('/:query', (0, _expressAsyncHandler.default)(async (req, res) => {
     }
 
     let mini_search = new _minisearch.default({
-      fields: ['denumire'],
+      fields: ["denumire"],
       storeFields: proprietati
     });
     mini_search.addAll(rezultate);
@@ -70,8 +70,8 @@ cautare.get('/:query', (0, _expressAsyncHandler.default)(async (req, res) => {
     });
 
     if (status_stoc) {
-      if (status_stoc.stoc > 0) stoc = 'În stoc';else stoc = 'Nu este în stoc';
-    } else stoc = 'Stoc necunoscut';
+      if (status_stoc.stoc > 0) stoc = "În stoc";else stoc = "Nu este în stoc";
+    } else stoc = "Stoc necunoscut";
 
     totalPotriviri[i].stoc = stoc;
   }

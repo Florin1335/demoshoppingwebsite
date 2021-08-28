@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch backend --exec babel-node backend/server.js",
+    "dev": "nodemon --watch backend_es6+ --exec babel-node backend_es6+/server.js",
+    "dev+build": "cd client && npm run build && cd .. && nodemon --watch backend --exec babel-node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "./node_modules/.bin/babel backend_es6+ --out-dir backend",
     "start": "node backend/server.js",

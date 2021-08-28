@@ -20,6 +20,7 @@ import DashboardPage from "./pages/dashboardPage/DashboardPage.js";
 import CartPage from "./pages/cartPage/CartPage";
 import LogoutPage from "./pages/authenticationPage/LogoutPage";
 import ActivareCont from "./pages/authenticationPage/ActivareCont";
+import SearchPage from "./pages/searchPage/SearchPage";
 
 function App() {
   const [isAuth] = useContext(LoginContext);
@@ -58,6 +59,9 @@ function App() {
         <ProtectedPage path="/logout">
           <LogoutPage></LogoutPage>
         </ProtectedPage>
+        <Route path="/cautare/:query">
+          <SearchPage></SearchPage>
+        </Route>
       </Switch>
       <Footer></Footer>
     </Router>
