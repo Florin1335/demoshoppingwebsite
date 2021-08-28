@@ -39,7 +39,9 @@ const cautare = _express.default.Router();
 
 const arrayCategorii = [_placaVideo.default, _procesor.default, _placaDeBaza.default, _memorieRam.default, _ssd.default, _hdd.default, _sursa.default, _carcasa.default, _cooler.default, _ventilator.default];
 cautare.get("/:query", (0, _expressAsyncHandler.default)(async (req, res) => {
+  console.log(req.params);
   let query = req.params.query.replaceAll("%20", " ");
+  console.log(req.params.query.replace(/%20/g, " "));
   let totalPotriviri = [];
 
   for (let i = 0; i < arrayCategorii.length; i++) {
