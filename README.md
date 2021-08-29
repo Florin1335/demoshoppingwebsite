@@ -1,5 +1,5 @@
 # demoshoppingwebsite
-Website pentru vanzarea unor componente de calculator în stilul MERN.
+Website pentru vanzarea unor componente de calculator realizat în stilul MERN.
 
 **Frontend**
 - ReactJS si Context API pentru global state management
