@@ -6,7 +6,7 @@ Website pentru vanzarea unor componente de calculator realizat în stilul MERN.
 - Bootstrap pentru o stilizare de bază
 
 **Backend**
-- Node.JS (Express)
+- Node.JS (Express), API cu mai multe funcționalități decât cele implementate, refolosit dintr-un proiect anterior.
 - MongoDB
 
 Deployment pe Heroku la https://demoshoppingwebsite.herokuapp.com
