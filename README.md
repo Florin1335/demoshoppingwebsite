@@ -3,7 +3,7 @@ Website pentru vanzarea unor componente de calculator realizat în stilul MERN.
 
 **Frontend**
 - ReactJS si Context API pentru global state management
-- Bootstrap pentru o stilizare de bază
+- Bootstrap pentru responsiveness și o stilizare de bază
 
 **Backend**
 - Node.JS (Express), API cu mai multe funcționalități decât cele implementate, refolosit dintr-un proiect anterior.
