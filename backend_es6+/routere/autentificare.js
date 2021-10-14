@@ -116,9 +116,7 @@ auth.post("/activare_cont", async (req, res) => {
   const exista = await utilizatori.findOne({ cod_activare: cod });
   if (exista) {
     exista.activat = true;
-    exista.cod_activare = null;
     exista.markModified("activat");
-    exista.markModified("cod_activare");
     await exista.save((err) => {
       if (err) res.status(500).json("Eroare: " + err.message);
       else {

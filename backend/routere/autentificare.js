@@ -121,9 +121,7 @@ auth.post("/activare_cont", async (req, res) => {
 
   if (exista) {
     exista.activat = true;
-    exista.cod_activare = null;
     exista.markModified("activat");
-    exista.markModified("cod_activare");
     await exista.save(err => {
       if (err) res.status(500).json("Eroare: " + err.message);else {
         res.json("Contul dumneavoastră a fost activat cu succes. Veți fi redirecționați în scurt timp la pagina de autentificare.");
